@@ -1,0 +1,33 @@
+---
+title: "Superstore_elemzes"
+author: "Barnai_Balazs"
+date: "2026-03-15"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+```{r}
+ggplot(data = superstore,aes(x=Sales,y=Profit)) +
+  geom_point()
+```
+```{r}
+ggplot(data=superstore,aes(x=Category)) +
+  geom_bar(fill="steelblue")
+```
+
+```{r}
+ggplot(data=superstore,aes(x=Sales,y=Profit)) +
+  geom_line(color="darkred",size=1)+
+  theme_minimal()
+```
+```{r}
+ggplot(data = superstore,aes(x=Sales,y=Profit)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "lm", color = "blue", fill = "lightblue") +
+  theme_minimal()
+```
+
